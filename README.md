@@ -235,6 +235,8 @@
 ### 4.  中缀表达式转换为后缀表达式  <a name="jump4" />
 > 中缀表达式转换为后缀表达式
 
+参考文献 
+https://www.cnblogs.com/chensongxian/p/7059802.html
 
 ```c
 
