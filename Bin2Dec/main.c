@@ -15,6 +15,13 @@ typedef struct
 	int stackSize;
 } sqStack;
 
+struct sqStack2
+{
+	ElemType *base;
+	ElemType *top;
+	int stackSize;
+} ;
+
 void InitStack(sqStack *s){
 	s->base = (ElemType *)malloc(STACK_INIT_SIZE * sizeof(ElemType));
 	if(!s->base){
