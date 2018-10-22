@@ -6,7 +6,7 @@
 //参数n: 表示列数
 //参数：(*chess)[8]:表示 指向棋盘每一行的指针。 
 int count = 0;
-notDanger(int row,int j,int  (*chess)[8]){
+int notDanger(int row,int j,int  (*chess)[8]){
 	int i,k,flag1=0,flag2=0,flag3=0,flag4=0,flag5=0;
 	//判断方向 
 	for(i=0;i<8;i++){
@@ -67,9 +67,11 @@ EightQueens(int row,int n,int (*chess)[8]){
 		} 
 			printf("\n\n");
 			count++;
-	}else{
+	}
+	else{
 		//判断这个位置是否有危险。如果没有危险，继续往下。
-		for(j=0;j<n;j++){ //判断是否危险 
+		for(j=0;j<n;j++){ 
+		   //判断是否危险 
 			if(notDanger(row,j,chess)){
 				for(i=0;i<8;i++){
 				  *(*(chess2+row)+i) = 0;
