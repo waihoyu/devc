@@ -10,7 +10,7 @@
 6. [汉诺塔问题](#jump6)
 7. [八皇后问题](#jump7)
 8. [KMP算法](#jump8)
-
+9. [二叉树](#jump9)
 
 ## 详解
 
@@ -488,6 +488,65 @@ https://www.cnblogs.com/chensongxian/p/7059802.html
 
 ```
 
+### 9.二叉树    <a name="jump9" />
+> 
+
+
+```c
+
+	#include <stdio.h>
+	#include <stdlib.h>
+	
+	/* run this program using the console pauser or add your own getch, system("pause") or input loop */
+	
+	typedef char ElemType;
+	
+	typedef struct BiTNode
+	{
+	   char data;
+	   struct BiTNode *lchild , *rchild;	
+	}BiTNode, *BiTree;
+	
+	//创建一棵二叉树
+	CreateBiTree(BiTree *T){
+		char c;
+		scanf("%c", &c);
+		if(' ' == c)
+		{
+		   *T = NULL;
+		}
+		else
+		{
+			*T = (BiTNode *)malloc(sizeof(BiTNode));
+			(*T)->data = c;
+			CreateBiTree(&(*T)->lchild);
+			CreateBiTree(&(*T)->rchild);
+		}
+	} 
+	
+	//访问二叉树结点的具体操作 
+	visit(char c,int level){
+	  printf("%c 位于第 %d 层 \n",c,level);	
+	}
+	//前序遍历二叉树
+	PreOrderTraverse(BiTree T,int level){
+		if(T){
+			visit(T->data,level);
+			PreOrderTraverse(T->lchild,level+1); 
+			PreOrderTraverse(T->rchild,level+1); 
+		}
+	} 
+	
+	int main(int argc, char *argv[]) {
+		int level = 1; 
+		BiTree tree = NULL;
+		CreateBiTree(&tree);
+		PreOrderTraverse(tree, level);
+	//	printf("位于第 层 \n");	
+		return 0;
+	}
+
+```
 
 
 ---
