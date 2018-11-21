@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 
 /* run this program using the console pauser or add your own getch, system("pause") or input loop */
 int ViolentMatch(char* s, char* p)  
@@ -13,7 +14,8 @@ int ViolentMatch(char* s, char* p)
     {  
         if (s[i] == p[j])  
         {  
-            //①如果当前字符匹配成功（即S[i] == P[j]），则i++，j++      
+            //①如果当前字符匹配成功（即S[i] == P[j]），则i++，j++    
+              
             i++;  
             j++;  
         }  
