@@ -25,7 +25,7 @@
 	#include <stdlib.h>
 	#include <math.h>
 	
-	/* run this program using the console pauser or add your own getch, system("pause") or input loop */
+	/* run this program usi`ng the console pauser or add your own getch, system("pause") or input loop */
 	
 	#define STACK_INIT_SIZE 20
 	#define STACKINCREMENT 10

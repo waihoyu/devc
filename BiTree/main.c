@@ -9,7 +9,7 @@ typedef struct BiTNode
 {
    char data;
    struct BiTNode *lchild , *rchild;	
-}BiTNode, *BiTree;
+} BiTNode, *BiTree;
 
 //创建一棵二叉树
 CreateBiTree(BiTree *T){
@@ -29,11 +29,13 @@ CreateBiTree(BiTree *T){
 } 
 
 //访问二叉树结点的具体操作 
-visit(char c,int level){
-  printf("%c 位于第 %d 层 \n",c,level);	
+visit(char c,int level)
+{
+  printf("%c 位于第 %d 层 \n", c, level);	
 }
+
 //前序遍历二叉树
-PreOrderTraverse(BiTree T,int level){
+PreOrderTraverse(BiTree T, int level){
 	if(T){
 		visit(T->data,level);
 		PreOrderTraverse(T->lchild,level+1); 
