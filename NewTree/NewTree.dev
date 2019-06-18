@@ -1,6 +1,6 @@
 [Project]
-FileName=NewPro.dev
-Name=NewPro
+FileName=NewTree.dev
+Name=NewTree
 Type=1
 Ver=2
 ObjFiles=
@@ -24,12 +24,11 @@ HostApplication=
 UseCustomMakefile=0
 CustomMakefile=
 CommandLine=
-Folders=source
+Folders=
 IncludeVersionInfo=0
 SupportXPThemes=0
 CompilerSet=0
 CompilerSettings=0000000000000000000000000
-UnitCount=1
 
 [VersionInfo]
 Major=1
@@ -49,14 +48,4 @@ ProductName=
 ProductVersion=
 AutoIncBuildNr=0
 SyncProduct=1
-
-[Unit1]
-FileName=main.c
-CompileCpp=0
-Folder=source
-Compile=1
-Link=1
-Priority=1000
-OverrideBuildCmd=0
-BuildCmd=
 
